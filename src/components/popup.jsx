@@ -9,7 +9,7 @@ const Popup = () => {
     return (
         <div className="popup">
             <button onClick={() => setPopUp(0)} className="close-btn">
-            <i className="fa-solid fa-xmark"></i>
+                <i className="fa-solid fa-xmark"></i>
             </button>
 
             <div className="left">
@@ -28,8 +28,14 @@ const Popup = () => {
                     <p>{cur?.address.suite}</p>
                     <p>{cur?.address.city}</p>
                     <p>{cur?.address.zipcode}</p>
+                    <a
+                        target="_blank"
+                        className="loc-btn"
+                        href={`https://www.google.com/maps?q=${cur.address.geo.lat},${cur.address.geo.lng}&z=10&label=${cur.company.name}`}
+                    >
+                        <i className="fa-solid fa-location-dot"></i>
+                    </a>
                 </div>
-                <a target="_blank" href={`https://www.google.com/maps?q=${cur.address.geo.lat},${cur.address.geo.lng}&z=10&label=${cur.company.name}`}><i className="fa-solid fa-location-dot"></i></a>
 
                 <div className="field">
                     <h3>Phone:</h3> <p>{cur?.phone}</p>
@@ -43,9 +49,9 @@ const Popup = () => {
 
                 <div className="company">
                     <div className="field">
-                        <h3>Company:</h3> <p>{cur?.company.name}</p>
+                        <h3>Company:</h3> <h4>{cur?.company.name}</h4>
+                        <p>{cur?.company.catchPhrase}</p>
                     </div>
-                    <p>{cur?.company.catchPhrase}</p>
                 </div>
             </div>
         </div>
