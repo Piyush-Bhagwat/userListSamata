@@ -101,7 +101,10 @@ function App() {
             <div className="nav">
                 <h1>Users List</h1>
 
-                <button className={`sort ${sort && "sorted"}`} onClick={() => setSort(prev => !prev)}>
+                <button
+                    className={`sort ${sort && "sorted"}`}
+                    onClick={() => setSort((prev) => !prev)}
+                >
                     <i class="fa-solid fa-arrow-down-a-z"></i>
                 </button>
 

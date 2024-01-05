@@ -45,7 +45,7 @@ input {
 }
 
 .sort {
-  background-color: #8EACCD;
+  background-color: #D2E0FB;
   font-size: 1.2em;
   border: none;
   padding: 8px;
@@ -55,6 +55,7 @@ input {
 
 .sorted {
   background-color: crimson;
+  color: white;
 }
 
 .search-btn {
@@ -111,7 +112,7 @@ input {
 .field {
   margin: 7px 5px;
   padding: 8px;
-  background: aliceblue;
+  background: white;
   border-radius: 10px;
   box-shadow: 2px 2px 7px #00000024;
   position: relative;
